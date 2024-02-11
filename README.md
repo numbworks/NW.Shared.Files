@@ -16,7 +16,7 @@ Contact: numbworks@gmail.com
 
 From the documentation:
 
-> `NW.Shared.Files` is a library that provides a collection of adapters to overcome the limits of System.IO.File and System.IO.FileInfo. 
+> `NW.Shared.Files` is a library that provides a collection of adapters to overcome the limits of *System.IO.File* and *System.IO.FileInfo*.
 
 ## Download the source code
 
