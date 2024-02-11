@@ -1,4 +1,7 @@
-﻿namespace NW.Shared.Files
+﻿using NW.Shared.Files.Validation;
+using NW.Shared.Validation;
+
+namespace NW.Shared.Files
 {
     /// <summary><inheritdoc cref="IFileManager"/></summary>
     public class FileManager : IFileManager
@@ -20,7 +23,7 @@
         public FileManager(IFileAdapter fileAdapter)
         {
 
-            // Validator.ValidateObject(fileAdapter, nameof(fileAdapter));
+            Validator.ValidateObject(fileAdapter, nameof(fileAdapter));
 
             _fileAdapter = fileAdapter;
 
@@ -41,8 +44,8 @@
         public IEnumerable<string> ReadAllLines(IFileInfoAdapter file)
         {
 
-            // Validator.ValidateObject(file, nameof(file));
-            // Validator.ValidateFileExistance(file);
+            Validator.ValidateObject(file, nameof(file));
+            FilesValidator.ValidateFileExistance(file);
 
             try
             {
@@ -61,8 +64,8 @@
         public string ReadAllText(IFileInfoAdapter file)
         {
 
-            // Validator.ValidateObject(file, nameof(file));
-            // Validator.ValidateFileExistance(file);
+            Validator.ValidateObject(file, nameof(file));
+            FilesValidator.ValidateFileExistance(file);
 
             try
             {
@@ -81,7 +84,7 @@
         public void WriteAllLines(IFileInfoAdapter file, IEnumerable<string> content)
         {
 
-            // Validator.ValidateObject(file, nameof(file));
+            Validator.ValidateObject(file, nameof(file));
 
             try
             {
@@ -100,7 +103,7 @@
         public void WriteAllText(IFileInfoAdapter file, string content)
         {
 
-            // Validator.ValidateObject(file, nameof(file));
+            Validator.ValidateObject(file, nameof(file));
 
             try
             {
@@ -119,7 +122,7 @@
         public IFileInfoAdapter Create(string filePath)
         {
 
-            // Validator.ValidateStringNullOrWhiteSpace(filePath, nameof(filePath));
+            Validator.ValidateStringNullOrWhiteSpace(filePath, nameof(filePath));
 
             return Create(new FileInfo(filePath));
         
@@ -127,7 +130,7 @@
         public IFileInfoAdapter Create(FileInfo fileInfo)
         {
 
-            // Validator.ValidateObject(fileInfo, nameof(fileInfo));
+            Validator.ValidateObject(fileInfo, nameof(fileInfo));
 
             return new FileInfoAdapter(fileInfo);
 
@@ -140,5 +143,5 @@
 
 /*
     Author: numbworks@gmail.com
-    Last Update: 09.02.2024
+    Last Update: 11.02.2024
 */

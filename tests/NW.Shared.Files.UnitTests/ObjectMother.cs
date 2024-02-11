@@ -1,5 +1,5 @@
-﻿using NUnit.Framework;
-using NW.Shared.Files.UnitTests.Utilities;
+﻿using NW.Shared.Files.UnitTests.Utilities;
+using NUnit.Framework;
 
 namespace NW.Shared.Files.UnitTests
 {

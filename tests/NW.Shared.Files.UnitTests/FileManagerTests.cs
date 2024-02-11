@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using NW.Shared.Files.Validation;
+using NW.Shared.Validation;
+using NUnit.Framework;
 
 namespace NW.Shared.Files.UnitTests
 {
@@ -40,18 +42,14 @@ namespace NW.Shared.Files.UnitTests
                                     ObjectMother.FileInfoAdapterExists,
                                     ObjectMother.FileAdapterIOException)
                 ).SetArgDisplayNames($"{nameof(readAllLinesExceptionTestCases)}_02"),
-
-            /**
             
             new TestCaseData(
                 new TestDelegate(
                         () => new FileManager().ReadAllLines(ObjectMother.FileInfoAdapterDoesntExist)
                     ),
                 typeof(ArgumentException),
-                UnivariateForecasting.Validation.MessageCollection.ProvidedPathDoesntExist(ObjectMother.FileInfoAdapterDoesntExist)
+                Validation.MessageCollection.ProvidedPathDoesntExist(ObjectMother.FileInfoAdapterDoesntExist)
                 ).SetArgDisplayNames($"{nameof(readAllLinesExceptionTestCases)}_03")
-
-            **/
 
         };
         private static TestCaseData[] readAllTextExceptionTestCases =
@@ -74,19 +72,15 @@ namespace NW.Shared.Files.UnitTests
                 MessageCollection.NotPossibleToRead(
                                     ObjectMother.FileInfoAdapterExists,
                                     ObjectMother.FileAdapterIOException)
-                ).SetArgDisplayNames($"{nameof(readAllTextExceptionTestCases)}_02")
+                ).SetArgDisplayNames($"{nameof(readAllTextExceptionTestCases)}_02"),
 
-            /**
-            
             new TestCaseData(
                 new TestDelegate(
                         () => new FileManager().ReadAllText(ObjectMother.FileInfoAdapterDoesntExist)
                     ),
                 typeof(ArgumentException),
-                UnivariateForecasting.Validation.MessageCollection.ProvidedPathDoesntExist(ObjectMother.FileInfoAdapterDoesntExist)
-                ).SetArgDisplayNames($"{nameof(readAllTextExceptionTestCases)}_03"),
-
-            **/
+                Validation.MessageCollection.ProvidedPathDoesntExist(ObjectMother.FileInfoAdapterDoesntExist)
+                ).SetArgDisplayNames($"{nameof(readAllTextExceptionTestCases)}_03")
 
         };
         private static TestCaseData[] writeAllLinesExceptionTestCases =
@@ -293,5 +287,5 @@ namespace NW.Shared.Files.UnitTests
 }
 /*
     Author: numbworks@gmail.com
-    Last Update: 09.02.2024
+    Last Update: 11.02.2024
 */
