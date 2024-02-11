@@ -38,10 +38,6 @@ PS C:\NW.Shared.Files> git clone https://github.com/numbworks/NW.Shared.Files.gi
 
 If you are a .NET developer and you want to use the library from within your projects, the binary packages are available on [NuGet](https://www.nuget.org/packages/NW.Shared.Files/).
 
-## Download the client's binary package
-
-If you are an non-developer user, you can download the client from the [Releases](https://github.com/numbworks/NW.Shared.Files/releases) page on Github.
-
 ## Getting Started
 
 - [Documentation: Library](docs/Documentation-NW.Shared.Files.md)
