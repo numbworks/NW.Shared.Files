@@ -1,4 +1,7 @@
-﻿using NW.Shared.Files.Validation;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using NW.Shared.Files.Validation;
 using NW.Shared.Validation;
 
 namespace NW.Shared.Files

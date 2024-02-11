@@ -1,5 +1,6 @@
-﻿using NW.Shared.Files.Validation;
-using NW.Shared.Validation;
+﻿using System;
+using System.IO;
+using System.Collections.Generic;
 using NUnit.Framework;
 
 namespace NW.Shared.Files.UnitTests

@@ -1,4 +1,8 @@
-﻿using NW.Shared.Files.UnitTests.Utilities;
+﻿using System;
+using System.IO;
+using System.Collections.Generic;
+using System.Linq;
+using NW.Shared.Files.UnitTests.Utilities;
 using NUnit.Framework;
 
 namespace NW.Shared.Files.UnitTests
@@ -61,5 +65,5 @@ namespace NW.Shared.Files.UnitTests
 
 /*
     Author: numbworks@gmail.com
-    Last Update: 09.02.2024
+    Last Update: 11.02.2024
 */

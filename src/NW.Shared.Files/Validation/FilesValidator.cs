@@ -1,4 +1,6 @@
-﻿namespace NW.Shared.Files.Validation
+﻿using System;
+
+namespace NW.Shared.Files.Validation
 {
     /// <summary>Collects all the library-specific validation methods.</summary>
     public static class FilesValidator

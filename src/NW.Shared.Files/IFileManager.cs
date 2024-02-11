@@ -1,4 +1,8 @@
-﻿namespace NW.Shared.Files
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+
+namespace NW.Shared.Files
 {
     /// <summary>Collects all the helper methods related to file management.</summary>
     public interface IFileManager
@@ -44,5 +48,5 @@
 
 /*
     Author: numbworks@gmail.com
-    Last Update: 09.02.2024
+    Last Update: 11.02.2024
 */

@@ -1,4 +1,6 @@
-﻿namespace NW.Shared.Files
+﻿using System;
+
+namespace NW.Shared.Files
 {
     ///<summary>Collects all the messages used for logging and exceptions for <see cref="NW.Shared.Files"/>.</summary>
     public static class MessageCollection
@@ -18,5 +20,5 @@
 
 /*
     Author: numbworks@gmail.com
-    Last Update: 09.02.2024
+    Last Update: 11.02.2024
 */

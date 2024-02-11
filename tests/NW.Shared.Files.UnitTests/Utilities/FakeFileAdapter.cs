@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace NW.Shared.Files.UnitTests.Utilities
 {
@@ -100,6 +102,6 @@ namespace NW.Shared.Files.UnitTests.Utilities
 /*
 
     Author: numbworks@gmail.com
-    Last Update: 09.02.2024
+    Last Update: 11.02.2024
 
 */

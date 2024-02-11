@@ -1,4 +1,6 @@
-﻿using System.Runtime.Serialization;
+﻿using System;
+using System.IO;
+using System.Runtime.Serialization;
 
 namespace NW.Shared.Files
 {
@@ -194,5 +196,5 @@ namespace NW.Shared.Files
 
 /*
     Author: numbworks@gmail.com
-    Last Update: 09.02.2024
+    Last Update: 11.02.2024
 */
