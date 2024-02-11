@@ -2,11 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
+    <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>disable</Nullable>
 
     <IsPackable>false</IsPackable>
     <IsTestProject>true</IsTestProject>
+    <Version>1.0.0</Version>
+    <Authors>numbworks</Authors>
+    <Copyright>numbworks 2024</Copyright>
+    <PackageProjectUrl>https://github.com/numbworks/NW.Shared.Files</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/numbworks/NW.Shared.Files</RepositoryUrl>
+    <PackageTags>csharp library system.io.file system.io system.io.fileinfo</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
