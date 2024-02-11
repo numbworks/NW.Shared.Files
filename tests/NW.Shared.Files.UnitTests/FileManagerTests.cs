@@ -2,6 +2,7 @@
 using System.IO;
 using System.Collections.Generic;
 using NUnit.Framework;
+using NW.Shared.Files.UnitTests.Utilities;
 
 namespace NW.Shared.Files.UnitTests
 {
@@ -266,7 +267,7 @@ namespace NW.Shared.Files.UnitTests
             (TestDelegate del, Type expectedType, string expectedMessage)
                 => ObjectMother.Method_ShouldThrowACertainException_WhenUnproperArguments(del, expectedType, expectedMessage);
         [Test]
-        public void Create_ShouldRetunAIFileInfoAdapterObject_WhenInvoked()
+        public void Create_ShouldReturnIFileInfoAdapterObject_WhenInvoked()
         {
 
             // Arrange
@@ -275,6 +276,21 @@ namespace NW.Shared.Files.UnitTests
 
             // Assert
             Assert.That(actual, Is.InstanceOf<IFileInfoAdapter>());
+
+        }
+
+        [Test]
+        public void FileManager_ShouldCreateAnInstanceOfThisType_WhenProperArgument()
+        {
+
+            // Arrange
+            // Act
+            FileManager actual1 = new FileManager();
+            FileManager actual2 = new FileManager(new FakeFileAdapter());
+
+            // Assert
+            Assert.That(actual1, Is.InstanceOf<FileManager>());
+            Assert.That(actual2, Is.InstanceOf<FileManager>());
 
         }
 
